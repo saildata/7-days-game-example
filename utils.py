@@ -25,4 +25,4 @@ def game_over_because(reason):
     '''
     Display game over screen.
     '''
-    print("\nGAME OVER\n===============\n",reason, "\nBetter luck next time!")
+    print(Fore.RED + "\nGAME OVER\n===============\n" + reason  + "\nBetter luck next time!")
