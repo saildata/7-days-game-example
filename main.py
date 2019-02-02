@@ -3,33 +3,18 @@
 Text-based game where the user must survive their first 7 days on a foreign planet.
 '''
 
-
-import os      # used for os.system('clear')
 import random
 import time    # add delay between events
 
 # local imports
 from title import display_title_screen
+from utils import clear_screen, game_over_because
 
-def clear_screen():
-    '''
-    Clear the terminal screen.
-    '''
-
-    os.system('clear')
-
-def game_over_because(reason):
-    '''
-    Display game over screen.
-    '''
-
-    print("\nGAME OVER\n===============\n",reason, "\nBetter luck next time!")
 
 def display_day01():
     '''
     Display day 01 in story
     '''
-
     clear_screen()
 
     text = [
@@ -41,8 +26,8 @@ def display_day01():
     "which you now see approximately 20 feet behind you."
     ]
 
-    for i in text:
-        print(i)
+    for line in text:
+        print(line)
         # create random delay between 0 and 1 seconds
         time.sleep(random.random())
         # add line breaks
@@ -78,7 +63,6 @@ def display_day02():
     '''
     Display day 02 in the story.
     '''
-
     clear_screen()
     print("DAY 2")
     print("===============")
@@ -127,7 +111,6 @@ def display_day03():
     '''
     Display day 03 in the story.
     '''
-
     clear_screen()
     print("DAY 3")
     print("===============")

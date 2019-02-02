@@ -9,7 +9,6 @@ def display_title_screen():
     '''
     Display title screen with delay between typing
     '''
-
     text = ['''
     ███████╗    ██████╗  █████╗ ██╗   ██╗███████╗
     ╚════██║    ██╔══██╗██╔══██╗╚██╗ ██╔╝██╔════╝
