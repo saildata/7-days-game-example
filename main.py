@@ -23,12 +23,14 @@ def display_day01():
     Display day 01 in story
     '''
     clear_screen()
-    print("DAY 1")
+    # (Bright) Blue text
+    print(Fore.BLUE + Style.BRIGHT + "DAY 1")
     print("===============")
     # create random delay between 0 and 1 seconds
     time.sleep(random.random())
 
-    print("")
+    # Change the color back to normal
+    print(Style.RESET_ALL + "")
     print("You wake up.")
     print("")
     time.sleep(random.random())
@@ -72,8 +74,14 @@ def display_day02():
     Display day 02 in the story.
     '''
     clear_screen()
-    print("DAY 2")
+    # (Bright) Blue text
+    print(Fore.BLUE + Style.BRIGHT + "DAY 2")
     print("===============")
+    # create random delay between 0 and 1 seconds
+    time.sleep(random.random())
+
+    # Change the color back to normal
+    print(Style.RESET_ALL + "")
     print("")
     print("Forget the space ship! ... you tell yourself. ")
     print("")
