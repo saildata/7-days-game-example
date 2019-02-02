@@ -18,20 +18,22 @@ def display_day01():
     clear_screen()
 
     text = [
-    "DAY 1\n===============",
+    "DAY 1",
+    "===============",
+    "",
     "You wake up.",
     "Looking down at your watch, you notice that it's 8 AM.",
-    "You are not sure where you are ... ",
+    "...",
+    "You are not sure where you are,",
     "but you begin to remember a crash landing in your space vehicle,",
+    "...",
+    "......",
     "which you now see approximately 20 feet behind you."
     ]
 
     for line in text:
         print(line)
         # create random delay between 0 and 1 seconds
-        time.sleep(random.random())
-        # add line breaks
-        print("\n")
         time.sleep(random.random())
 
     # Get main character name (still day 01)
@@ -42,14 +44,12 @@ def display_day01():
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
-    print("")
-    answer = input("""
-    Would you like to
+    answer = input('''\nWould you like to
     [1] Go back to the spaceship to repair it or
     [2] go explore the forest?
-    \nType 1 or 2 and press enter to continue: """)
+    \nType 1 or 2 and press ENTER to continue:\
+    ''')
 
-    #TODO: What if the player doesn't enter an appropriate answer??
     print("\n>> Your answer was: ", answer, "<<\n")
 
     if answer == "1":
@@ -91,12 +91,11 @@ def display_day02():
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
-    print("")
-    answer = input("""
-    Would you like to
+    answer = input('''\nWould you like to
     [1] Eat the pizza. You're the master of danger!
     [2] Try your hand at fishing instead
-    \nType 1 or 2 and press enter to continue: """)
+    \nType 1 or 2 and press ENTER to continue:\
+    ''')
 
     print("\n>> Your answer was: ", answer, "<<\n")
 
