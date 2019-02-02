@@ -3,12 +3,12 @@
 Text-based game where the user must survive their first 7 days on a foreign planet.
 '''
 
+import os
 import random
 import time    # add delay between events
 
 # local imports
 from title import display_title_screen
-from utils import clear_screen, game_over_because
 
 # add color output
 # https://github.com/tartley/colorama
@@ -151,11 +151,42 @@ def display_day03():
     print("Welcome to day 3. You'll have to come back when this branch is finished!")
 
 
-########################
+##############
 # Run the game
-# Nothing should go below this other than the title screen
-# and day 1. Days 2 - 7 should be called from the day before it.
-# For example, day 2 should be called from day 1, not from here.
-########################
-display_title_screen()
-display_day01()
+# Add helper/utility functions
+##############################
+
+
+def start_game():
+    '''
+    Main function. This runs when the game is started or
+    the player chooses to replay (after game over)
+    '''
+    display_title_screen()
+    display_day01()
+
+def clear_screen():
+    '''
+    Clear the terminal screen.
+    '''
+    os.system('clear')
+
+def ask_play_again():
+    '''
+    Offer to play game again.
+    '''
+    answer = input(Fore.WHITE + Back.GREEN + "\nPlay again? (Y/N): " + Style.RESET_ALL)
+    if answer.upper() == "Y":
+        start_game()
+    else:
+        print("Thank you for playing!")
+
+def game_over_because(reason):
+    '''
+    Display game over screen.
+    '''
+    print(Fore.RED + "\nGAME OVER\n===============\n" + reason  + "\nBetter luck next time!")
+    # Ask if the user wants to play again
+    ask_play_again()
+
+start_game()
