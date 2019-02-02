@@ -12,27 +12,22 @@ def display_title_screen():
     '''
     Display title screen with delay between typing
     '''
-    text = ['''
+    text = '''
     ███████╗    ██████╗  █████╗ ██╗   ██╗███████╗
     ╚════██║    ██╔══██╗██╔══██╗╚██╗ ██╔╝██╔════╝
         ██╔╝    ██║  ██║███████║ ╚████╔╝ ███████╗
        ██╔╝     ██║  ██║██╔══██║  ╚██╔╝  ╚════██║
        ██║      ██████╔╝██║  ██║   ██║   ███████║
        ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝
-       ''',
-    "     An exciting adventure game.",
-    "",
-    ]
+       '''
+    # green text, blinking
+    cprint(text, fg='g', style='x')
 
-    # Loop over the text for the intro screen one
-    # line at a time
-    for line in text:
-        # Print each line in green text
-        cprint(line, fg='g')
-        # create random delay between 0 and 1 seconds
-        time.sleep(random.random())
+    # green text
+    cprint("An exciting adventure game.", fg='g')
 
-    # Change the color back to normal
-    cprint("")
-    # Pause until the user presses the enter key
+    # blank line
+    print("")
+    
+    #Pause until the user presses the enter key
     input("Press enter to begin...")
