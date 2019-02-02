@@ -11,9 +11,7 @@ import random
 import time    # add delay between events
 
 # local imports
-from cprint import cprint
 from title import display_title_screen
-import art
 
 def display_day01():
     '''
@@ -21,23 +19,8 @@ def display_day01():
     '''
 
     clear_screen()
-
-    # Spaceship ASCII art
-    # Add animation "effect" using
-    # decreasing image width - see art.py file
-    cprint(art.ASCII_SPACESHIP_01, fg='g')
-    time.sleep(1)
-    clear_screen()
-    cprint(art.ASCII_SPACESHIP_02, fg='g')
-    time.sleep(1)
-    clear_screen()
-    cprint(art.ASCII_SPACESHIP_03, fg='g')
-    time.sleep(2)
-    clear_screen()
-
-    # Blue text
-    cprint("DAY 1", fg='b')
-    cprint("===============", fg='b')
+    print("DAY 1")
+    print("===============")
     # create random delay between 0 and 1 seconds
     time.sleep(random.random())
 
@@ -64,8 +47,7 @@ def display_day01():
     time.sleep(random.random())
 
     # Get main character name (still day 01)
-    # Add color: Yellow text for user input
-    cprint("What was your name again?: ", fg='y')
+    print("What was your name again?: ")
     name = input()
 
     # Use str.title method to capitalize first letter of user name
@@ -79,8 +61,8 @@ def display_day01():
     [2] go explore the forest?
     \nType 1 or 2 and press ENTER to continue:\
     '''
-    # Yellow text
-    cprint(question, fg='y')
+
+    print(question)
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
@@ -97,9 +79,8 @@ def display_day02():
     Display day 02 in the story.
     '''
     clear_screen()
-    # Blue text
-    cprint("DAY 2", fg='b')
-    cprint("===============", fg='b')
+    print("DAY 2")
+    print("===============")
     # create random delay between 0 and 1 seconds
     time.sleep(random.random())
 
@@ -133,12 +114,12 @@ def display_day02():
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
     question = '''\nWould you like to
-    [1] Eat the pizza. You're the master of danger! 🍕 + 🌳 = ❓
-    [2] Try your hand at fishing instead 🐟 🐟 🐟
+    [1] Eat the pizza. You're the master of danger!
+    [2] Try your hand at fishing instead
     \nType 1 or 2 and press ENTER to continue:\
     '''
-    # Yellow text
-    cprint(question, fg='y')
+
+    print(question)
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
@@ -155,9 +136,8 @@ def display_day03():
     Display day 03 in the story.
     '''
     clear_screen()
-    # Blue text
-    cprint("DAY 3", fg='b')
-    cprint("===============", fg='b')
+    print("DAY 3")
+    print("===============")
     # create random delay between 0 and 1 seconds
     time.sleep(random.random())
     print("Welcome to day 3. You'll have to come back when this branch is finished!")
@@ -188,7 +168,7 @@ def ask_play_again():
     '''
     print("")
     question = "Play again? (Y/N): "
-    cprint(question, fg='g', bg='k')
+    print(question)
     answer = input()
     if answer.upper() == "Y":
         start_game()
@@ -199,7 +179,7 @@ def game_over_because(reason):
     '''
     Display game over screen.
     '''
-    cprint("\nGAME OVER\n===============\n" + reason  + "\nBetter luck next time!", fg='r')
+    print("\nGAME OVER\n===============\n" + reason  + "\nBetter luck next time!")
     # Ask if the user wants to play again
     ask_play_again()
 
