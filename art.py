@@ -2,7 +2,9 @@
 Art used in 7 days game
 '''
 
-ASCII_SPACESHIP = '''
+# Generated at https://www.text-image.com/convert/ascii.html
+# Spaceship at 40 characters wide
+ASCII_SPACESHIP_01 = '''
                    ``
                    ..
                   .``.
@@ -25,4 +27,46 @@ ASCII_SPACESHIP = '''
            .- `:        :` -.
             / .-        -. /
             / :`        `: /
+'''
+
+# Spaceship at 30 characters wide
+ASCII_SPACESHIP_02 = '''
+
+              ``
+              ..
+             .  .
+            `.``.`
+            -`  `-
+           :-`  `-:
+          `..`  `..`
+          . `.``.. .
+        `.` `....` `.`
+      `.`   ` `` `   `.`
+    `.` ````` `` ````` `.`
+   -``  .  `` `` ``  .  ``-
+   .`.``.``.``````.``.``.`.
+        /.`+`    `+`./
+        `- :      : -`
+         :`-      -`:
+         :..      ..:
+         ::`      `::
+         :s        s:
+         `.        .`
+'''
+
+# Spaceship at 20 characters wide
+ASCII_SPACESHIP_03 = '''
+         ``
+        ````
+        .``.
+       ..  ..
+       `.``.`
+     `` .``. ``
+   ``  ``````  ``
+  -``. `````` .`.-
+     -`-````-`-
+     `.-    -.`
+      --    --
+      -.    .-
+      -`    `-
 '''

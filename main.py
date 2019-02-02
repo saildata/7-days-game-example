@@ -9,7 +9,7 @@ import time    # add delay between events
 
 # local imports
 from title import display_title_screen
-from art import ASCII_SPACESHIP
+import art
 
 # add color output
 # https://github.com/tartley/colorama
@@ -27,7 +27,15 @@ def display_day01():
     clear_screen()
 
     # Spaceship ASCII art
-    print(ASCII_SPACESHIP)
+    # animation "effect" using
+    # ASCII width (decreasing) - see art.py file
+    print(art.ASCII_SPACESHIP_01)
+    time.sleep(1)
+    clear_screen()
+    print(art.ASCII_SPACESHIP_02)
+    time.sleep(1)
+    clear_screen()
+    print(art.ASCII_SPACESHIP_03)
     time.sleep(2)
     clear_screen()
 
