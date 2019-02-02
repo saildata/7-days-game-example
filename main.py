@@ -35,30 +35,29 @@ def display_day01():
     # Blue text
     cprint("DAY 1", fg='b')
     cprint("===============", fg='b')
-    # create random delay between 0 and 1 seconds
-    time.sleep(random.random())
+    # create random delay between 1 and 2 seconds
+    time.sleep(random.randrange(1,2))
 
     print("You wake up.")
     print("")
-    time.sleep(random.random())
-
+    time.sleep(random.randrange(1,2))
     print("Looking down at your watch, you notice that it's 8 AM. ⏰")
     print("...")
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
 
     print("You are not sure where you are, 🗺")
     print("but you begin to remember a crash landing in your space vehicle,")
     print("")
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
     print("🚀")
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
     print("🌠")
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
     print("🔥 🔥 🔥")
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
     print("")
     print("which you now see approximately 20 feet behind you.")
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
 
     # Get main character name (still day 01)
     # Add color: Yellow text for user input
@@ -68,6 +67,7 @@ def display_day01():
     # Use str.title method to capitalize first letter of user name
     print("\nWell,", name.title(), ", you tell yourself...")
     print("It's time to figure out what's going on.")
+    time.sleep(random.randrange(1,2))
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
@@ -81,6 +81,7 @@ def display_day01():
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
+    time.sleep(random.randrange(1,2))
 
     if answer == "1":
         # Player is going back to the spaceship.. bad choice
@@ -98,34 +99,34 @@ def display_day02():
     cprint("DAY 2", fg='b')
     cprint("===============", fg='b')
     # create random delay between 0 and 1 seconds
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
 
     print("")
     print("Forget the space ship! ... ")
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
 
     print("")
     print("It's time that I live a little!")
     print("Let's see what this forest has to offer.")
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
 
     print("...")
     print("")
     print("As you stumble along in the forest, you come across a pizza!")
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
 
     print("...")
     print("")
-    # system sleep for 1 second
-    time.sleep(1)
     print("Wait a minute... thinking outloud, you realize ...")
+    time.sleep(random.randrange(1,2))
 
     print("...")
     print("")
-    time.sleep(0.5)
+    time.sleep(random.randrange(1,2))
 
     print("I am super hungry, but this seems too good to be true!")
     print("You have a decision to make:")
+    time.sleep(random.randrange(1,2))
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
@@ -139,6 +140,7 @@ def display_day02():
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
+    time.sleep(random.randrange(1,2))
 
     if answer == "1":
         # Player decides to eat the forest pizza (gross!)
@@ -156,28 +158,15 @@ def display_day03():
     cprint("DAY 3", fg='b')
     cprint("===============", fg='b')
     # create random delay between 0 and 1 seconds
-    time.sleep(random.random())
+    time.sleep(random.randrange(1,2))
     print("Welcome to day 3. You'll have to come back when this branch is finished!")
+
 
 
 ##############
 # Run the game
 # Add helper/utility functions
 ##############################
-
-def start_game():
-    '''
-    Main function. This runs when the game is started or
-    the player chooses to replay (after game over)
-    '''
-    display_title_screen()
-    display_day01()
-
-def clear_screen():
-    '''
-    Clear the terminal screen.
-    '''
-    os.system('clear')
 
 def ask_play_again():
     '''
@@ -192,6 +181,14 @@ def ask_play_again():
     else:
         print("Thank you for playing!")
 
+
+def clear_screen():
+    '''
+    Clear the terminal screen.
+    '''
+    os.system('clear')
+
+
 def game_over_because(reason):
     '''
     Display game over screen.
@@ -199,6 +196,16 @@ def game_over_because(reason):
     cprint("\nGAME OVER\n===============\n" + reason  + "\nBetter luck next time!", fg='r')
     # Ask if the user wants to play again
     ask_play_again()
+
+
+def start_game():
+    '''
+    Main function. This runs when the game is started or
+    the player chooses to replay (after game over)
+    '''
+    clear_screen()
+    display_title_screen()
+    display_day01()
 
 
 # Main loop
