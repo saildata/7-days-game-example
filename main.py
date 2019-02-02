@@ -21,7 +21,7 @@ def display_day01():
 
     # Spaceship ASCII art
     # Add animation "effect" using
-    # ASCII width (decreasing) - see art.py file
+    # decreasing image width - see art.py file
     cprint(art.ASCII_SPACESHIP_01, fg='g')
     time.sleep(1)
     clear_screen()
