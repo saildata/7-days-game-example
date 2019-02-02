@@ -101,7 +101,7 @@ def display_day02():
     time.sleep(random.random())
 
     print("")
-    print("Forget the space ship! ... you tell yourself. ")
+    print("Forget the space ship! ... ")
     time.sleep(random.random())
 
     print("")
@@ -118,7 +118,7 @@ def display_day02():
     print("")
     # system sleep for 1 second
     time.sleep(1)
-    print("Wait a minute... you tell yourself")
+    print("Wait a minute... thinking outloud, you realize ...")
 
     print("...")
     print("")
