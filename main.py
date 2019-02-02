@@ -9,6 +9,7 @@ import time    # add delay between events
 
 # local imports
 from title import display_title_screen
+from art import ASCII_SPACESHIP
 
 # add color output
 # https://github.com/tartley/colorama
@@ -22,7 +23,14 @@ def display_day01():
     '''
     Display day 01 in story
     '''
+
     clear_screen()
+
+    # Spaceship ASCII art
+    print(ASCII_SPACESHIP)
+    time.sleep(2)
+    clear_screen()
+
     # (Bright) Blue text
     print(Fore.BLUE + Style.BRIGHT + "DAY 1")
     print("===============")
