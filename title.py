@@ -5,12 +5,8 @@ Title screen for 7 days game
 import time
 import random
 
-# add color output
-# https://github.com/tartley/colorama
-from colorama import init
-init()
-
-from colorama import Fore, Back, Style
+# local imports
+from cprint import cprint
 
 def display_title_screen():
     '''
@@ -32,11 +28,11 @@ def display_title_screen():
     # line at a time
     for line in text:
         # Print each line in green text
-        print(Fore.GREEN + line)
+        cprint(line, fg='g')
         # create random delay between 0 and 1 seconds
         time.sleep(random.random())
 
     # Change the color back to normal
-    print(Style.RESET_ALL)
+    cprint("")
     # Pause until the user presses the enter key
     input("Press enter to begin...")
