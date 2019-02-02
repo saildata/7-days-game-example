@@ -8,10 +8,11 @@ import random
 import time    # add delay between events
 
 # local imports
+from cprint import cprint
 from title import display_title_screen
 import art
 
-# add color output
+# add color output - cross platform
 # https://github.com/tartley/colorama
 from colorama import init
 init()
