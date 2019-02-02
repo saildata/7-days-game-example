@@ -47,7 +47,7 @@ def display_day01():
     time.sleep(random.random())
     print("🌠")
     time.sleep(random.random())
-    print("🔥🔥🔥")
+    print("🔥 🔥 🔥")
     time.sleep(random.random())
     print("which you now see approximately 20 feet behind you.")
     time.sleep(random.random())
@@ -121,7 +121,7 @@ def display_day02():
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
     answer = input(Fore.YELLOW + '''\nWould you like to
-    [1] Eat the pizza. You're the master of danger! 🍕+🌳=❓
+    [1] Eat the pizza. You're the master of danger! 🍕 + 🌳 = ❓
     [2] Try your hand at fishing instead 🐟 🐟 🐟
     \nType 1 or 2 and press ENTER to continue:\
     ''' + Style.RESET_ALL)
