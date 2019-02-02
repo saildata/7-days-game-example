@@ -1,9 +1,15 @@
-# 7 Days
-# Text-based game where the user must survive their first 7 days on a foreign planet.
+'''
+7 Days - The Game - Example Code
+Text-based game where the user must survive their first 7 days on a foreign planet.
+'''
+
 
 import os      # used for os.system('clear')
 import random
 import time    # add delay between events
+
+# local imports
+from title import display_title_screen
 
 def clear_screen():
     '''
@@ -11,33 +17,6 @@ def clear_screen():
     '''
 
     os.system('clear')
-
-def display_title_screen():
-    '''
-    Display title screen with delay between typing
-    '''
-
-    text = ['''
-    ███████╗    ██████╗  █████╗ ██╗   ██╗███████╗
-    ╚════██║    ██╔══██╗██╔══██╗╚██╗ ██╔╝██╔════╝
-        ██╔╝    ██║  ██║███████║ ╚████╔╝ ███████╗
-       ██╔╝     ██║  ██║██╔══██║  ╚██╔╝  ╚════██║
-       ██║      ██████╔╝██║  ██║   ██║   ███████║
-       ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝
-       ''',
-    "     An exciting adventure game.",
-    "",
-    ]
-
-    # Loop over the text for the intro screen one
-    # line at a time
-    for line in text:
-        print(line)
-        # create random delay between 0 and 1 seconds
-        time.sleep(random.random())
-
-    # Pause until the user presses the enter key
-    input("Press enter to begin...")
 
 def game_over_because(reason):
     '''
