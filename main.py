@@ -35,18 +35,26 @@ def display_day01():
     print("")
     time.sleep(random.random())
 
-    print("Looking down at your watch, you notice that it's 8 AM.")
+    print("Looking down at your watch, you notice that it's 8 AM. ⏰")
     print("...")
     time.sleep(random.random())
 
-    print("You are not sure where you are,")
+    print("You are not sure where you are, 🗺")
     print("but you begin to remember a crash landing in your space vehicle,")
-    print("...")
+    print("")
+    time.sleep(random.random())
+    print("🚀")
+    time.sleep(random.random())
+    print("🌠")
+    time.sleep(random.random())
+    print("🔥🔥🔥")
+    time.sleep(random.random())
     print("which you now see approximately 20 feet behind you.")
     time.sleep(random.random())
 
     # Get main character name (still day 01)
-    name = input("What was your name again?: ")
+    # Add color: Yellow text for user input
+    name = input(Fore.YELLOW + "What was your name again?: " + Style.RESET_ALL)
 
     # Use str.title method to capitalize first letter of user name
     print("\nWell,", name.title(), ", you tell yourself...")
@@ -54,11 +62,12 @@ def display_day01():
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
-    answer = input('''\nWould you like to
+    # Add color: Yellow text for user input
+    answer = input(Fore.YELLOW + '''\nWould you like to
     [1] Go back to the spaceship to repair it or
     [2] go explore the forest?
     \nType 1 or 2 and press ENTER to continue:\
-    ''')
+    ''' + Style.RESET_ALL)
 
     print("\n>> Your answer was: ", answer, "<<\n")
 
@@ -84,13 +93,17 @@ def display_day02():
     print(Style.RESET_ALL + "")
     print("")
     print("Forget the space ship! ... you tell yourself. ")
+    time.sleep(random.random())
+
     print("")
     print("It's time that I live a little!")
     print("Let's see what this forest has to offer.")
+    time.sleep(random.random())
 
     print("...")
     print("")
     print("As you stumble along in the forest, you come across a pizza!")
+    time.sleep(random.random())
 
     print("...")
     print("")
@@ -107,11 +120,11 @@ def display_day02():
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
-    answer = input('''\nWould you like to
-    [1] Eat the pizza. You're the master of danger!
-    [2] Try your hand at fishing instead
+    answer = input(Fore.YELLOW + '''\nWould you like to
+    [1] Eat the pizza. You're the master of danger! 🍕+🌳=❓
+    [2] Try your hand at fishing instead 🐟 🐟 🐟
     \nType 1 or 2 and press ENTER to continue:\
-    ''')
+    ''' + Style.RESET_ALL)
 
     print("\n>> Your answer was: ", answer, "<<\n")
 
@@ -127,8 +140,14 @@ def display_day03():
     Display day 03 in the story.
     '''
     clear_screen()
-    print("DAY 3")
+    # (Bright) Blue text
+    print(Fore.BLUE + Style.BRIGHT + "DAY 3")
     print("===============")
+    # create random delay between 0 and 1 seconds
+    time.sleep(random.random())
+
+    # Change the color back to normal
+    print(Style.RESET_ALL + "")
     print("Welcome to day 3. You'll have to come back when this branch is finished!")
 
 
