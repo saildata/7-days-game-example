@@ -129,7 +129,7 @@ def display_day02():
     time.sleep(random.randrange(1,2))
 
     # Give the user a decision to make. Depending on their answer,
-    # the game either ends here or they continue on to day 2
+    # the game either ends here or they continue on to day 3
     question = '''\nWould you like to
     [1] Eat the pizza. You're the master of danger! 🍕 + 🌳 = ❓
     [2] Try your hand at fishing instead 🐟 🐟 🐟
