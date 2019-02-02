@@ -7,6 +7,12 @@ import os
 import random
 import time
 
+# add color output
+# https://github.com/tartley/colorama
+from colorama import init
+init()
+
+from colorama import Fore, Back, Style
 
 def clear_screen():
     '''

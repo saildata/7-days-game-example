@@ -10,6 +10,13 @@ import time    # add delay between events
 from title import display_title_screen
 from utils import clear_screen, game_over_because
 
+# add color output
+# https://github.com/tartley/colorama
+from colorama import init
+init()
+
+from colorama import Fore, Back, Style
+
 
 def display_day01():
     '''

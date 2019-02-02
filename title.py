@@ -5,6 +5,13 @@ Title screen for 7 days game
 import time
 import random
 
+# add color output
+# https://github.com/tartley/colorama
+from colorama import init
+init()
+
+from colorama import Fore, Back, Style
+
 def display_title_screen():
     '''
     Display title screen with delay between typing
