@@ -65,6 +65,7 @@ def display_day01():
     time.sleep(random.random())
     print("🔥 🔥 🔥")
     time.sleep(random.random())
+    print("")
     print("which you now see approximately 20 feet behind you.")
     time.sleep(random.random())
 
@@ -191,7 +192,7 @@ def ask_play_again():
     '''
     Offer to play game again.
     '''
-    answer = input(Fore.WHITE + Back.GREEN + "\nPlay again? (Y/N): " + Style.RESET_ALL)
+    answer = input(Fore.GREEN + Back.BLACK + "\nPlay again? (Y/N): " + Style.RESET_ALL)
     if answer.upper() == "Y":
         start_game()
     else:
