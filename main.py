@@ -23,29 +23,30 @@ def display_day01():
     Display day 01 in story
     '''
     clear_screen()
+    print("DAY 1")
+    print("===============")
+    # create random delay between 0 and 1 seconds
+    time.sleep(random.random())
 
-    text = [
-    "DAY 1",
-    "===============",
-    "",
-    "You wake up.",
-    "Looking down at your watch, you notice that it's 8 AM.",
-    "...",
-    "You are not sure where you are,",
-    "but you begin to remember a crash landing in your space vehicle,",
-    "...",
-    "......",
-    "which you now see approximately 20 feet behind you."
-    ]
+    print("")
+    print("You wake up.")
+    print("")
+    time.sleep(random.random())
 
-    for line in text:
-        print(line)
-        # create random delay between 0 and 1 seconds
-        time.sleep(random.random())
+    print("Looking down at your watch, you notice that it's 8 AM.")
+    print("...")
+    time.sleep(random.random())
+
+    print("You are not sure where you are,")
+    print("but you begin to remember a crash landing in your space vehicle,")
+    print("...")
+    print("which you now see approximately 20 feet behind you.")
+    time.sleep(random.random())
 
     # Get main character name (still day 01)
     name = input("What was your name again?: ")
 
+    # Use str.title method to capitalize first letter of user name
     print("\nWell,", name.title(), ", you tell yourself...")
     print("It's time to figure out what's going on.")
 
