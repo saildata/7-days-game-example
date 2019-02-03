@@ -31,7 +31,6 @@ ASCII_SPACESHIP_01 = '''
 
 # Spaceship at 30 characters wide
 ASCII_SPACESHIP_02 = '''
-
               ``
               ..
              .  .
@@ -52,6 +51,8 @@ ASCII_SPACESHIP_02 = '''
          ::`      `::
          :s        s:
          `.        .`
+
+
 '''
 
 # Spaceship at 20 characters wide
@@ -69,4 +70,13 @@ ASCII_SPACESHIP_03 = '''
       --    --
       -.    .-
       -`    `-
+
+
+
+
+
+
+
+
+
 '''

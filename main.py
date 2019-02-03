@@ -23,10 +23,16 @@ def display_day01():
     # Add animation "effect" using
     # decreasing image width - see art.py file
     cprint(art.ASCII_SPACESHIP_01, fg='g')
-    time.sleep(1)
+    time.sleep(0.5)
     clear_screen()
     cprint(art.ASCII_SPACESHIP_02, fg='g')
-    time.sleep(1)
+    time.sleep(0.5)
+    clear_screen()
+    cprint(art.ASCII_SPACESHIP_01, fg='g')
+    time.sleep(0.5)
+    clear_screen()
+    cprint(art.ASCII_SPACESHIP_02, fg='g')
+    time.sleep(0.5)
     clear_screen()
     cprint(art.ASCII_SPACESHIP_03, fg='g')
     time.sleep(2)
