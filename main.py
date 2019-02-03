@@ -38,8 +38,8 @@ def display_day01():
     # create random delay between 1 and 2 seconds
     time.sleep(random.randrange(1,2))
 
-    print("You wake up.")
     print("")
+    print("You wake up.")
     time.sleep(random.randrange(1,2))
     print("Looking down at your watch, you notice that it's 8 AM. ⏰")
     print("...")
@@ -61,7 +61,7 @@ def display_day01():
 
     # Get main character name (still day 01)
     # Add color: Yellow text for user input
-    cprint("What was your name again?: ", fg='y')
+    cprint("\nWhat was your name again?: ", fg='y')
     name = input()
 
     # Use str.title method to capitalize first letter of user name
@@ -72,8 +72,8 @@ def display_day01():
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
     question = '''\nWould you like to
-    [1] Go back to the spaceship to repair it or
-    [2] go explore the forest?
+    [1] Go back to the spaceship to repair it 🛠  or
+    [2] go explore the forest? 🌲 🌲 🌲
     \nType 1 or 2 and press ENTER to continue:\
     '''
     # Yellow text
@@ -102,22 +102,22 @@ def display_day02():
     time.sleep(random.randrange(1,2))
 
     print("")
-    print("Forget the space ship! ... ")
+    print("Forget the space ship! 🚀  ... ")
     time.sleep(random.randrange(1,2))
 
     print("")
-    print("It's time that I live a little!")
+    print("It's time that I live a little! 🎉")
     print("Let's see what this forest has to offer.")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(2,3))
 
     print("...")
     print("")
-    print("As you stumble along in the forest, you come across a pizza!")
-    time.sleep(random.randrange(1,2))
+    print("As you stumble along in the forest, you come across a pizza! 🍕")
+    time.sleep(random.randrange(2,3))
 
     print("...")
     print("")
-    print("Wait a minute... thinking outloud, you realize ...")
+    print("Wait a minute ... thinking outloud, you realize ...")
     time.sleep(random.randrange(1,2))
 
     print("...")
@@ -126,7 +126,7 @@ def display_day02():
 
     print("I am super hungry, but this seems too good to be true!")
     print("You have a decision to make:")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(2,3))
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 3
@@ -305,8 +305,8 @@ def start_game(day=1):
     if day == 1:
         display_day01()
     else:
-        function_str = 'display_day0' + str(day)
-        globals()[function_str]() # start_game(day=2) -> display_day02
+        day_string = 'display_day0' + str(day)
+        globals()[day_string]() # start_game(day=2) -> display_day02
 
 
 # Main loop
