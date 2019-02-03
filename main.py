@@ -180,6 +180,7 @@ def display_day03():
 
     # Sun / lake with fish
     # sun copied from wego project https://github.com/schachmat/wego/blob/master/frontends/ascii-art-table.go
+    # Note: the blinking text doesn't work on repl.it
 
     cprint("                            \\   /  ", fg='y')
     cprint("                             .-.    ", fg='y')
