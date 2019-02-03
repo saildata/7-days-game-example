@@ -98,7 +98,7 @@ def display_day02():
     # Blue text
     cprint("DAY 2", fg='b')
     cprint("===============", fg='b')
-    # create random delay between 0 and 1 seconds
+    # create random delay between 1 and 2 seconds
     time.sleep(random.randrange(1,2))
 
     print("")
@@ -149,6 +149,7 @@ def display_day02():
         # Player moves on to day 02
         display_day03()
 
+
 def display_day03():
     '''
     Display day 03 in the story.
@@ -157,9 +158,100 @@ def display_day03():
     # Blue text
     cprint("DAY 3", fg='b')
     cprint("===============", fg='b')
-    # create random delay between 0 and 1 seconds
+    # create random delay between 1 and 2 seconds
     time.sleep(random.randrange(1,2))
-    print("Welcome to day 3. You'll have to come back when this branch is finished!")
+
+    print("")
+    print("You continue on walking through the forest. 🌲 🌲 🌲")
+    time.sleep(random.randrange(1,2))
+    print("")
+    print("Your mission is to find a stick so that you can make a fishing pole and finally eat! 🎣")
+    time.sleep(random.randrange(2,3))
+    print("")
+    print("You manage to find 🔍 a stick and put together a simple, although functional fishing pole. 😎")
+    time.sleep(random.randrange(3,4))
+    print("")
+    print("Luckily 🍀 you also come across a small lake")
+    time.sleep(random.randrange(1,2))
+    print("")
+    print("Now, about to faint due to lack of food, you sit down and begin fishing.")
+    print("")
+    time.sleep(random.randrange(2,3))
+
+    # Sun / lake with fish
+    # sun copied from wego project https://github.com/schachmat/wego/blob/master/frontends/ascii-art-table.go
+
+    cprint("                            \\   /  ", fg='y')
+    cprint("                             .-.    ", fg='y')
+    cprint("                          ‒ (   ) ‒ ", fg='y')
+    cprint("                             `-᾿    ", fg='y')
+    cprint("                            /   \\  ", fg='y')
+    cprint("                                    ")
+    cprint("\🐟/\  /\  /\🐟/\  /\  /\🐟/\  /\  /", fg='b', style='x')
+    cprint(" \/  \/🐟\/  \/  \/🐟\/  \/  \/🐟\/ ", fg='b', style='x')
+    time.sleep(4)
+    clear_screen()
+
+    # stop the blinking to avoid rage quit
+    cprint("                            \\   /  ", fg='y')
+    cprint("                             .-.    ", fg='y')
+    cprint("                          ‒ (   ) ‒ ", fg='y')
+    cprint("                             `-᾿    ", fg='y')
+    cprint("                            /   \\  ", fg='y')
+    cprint("                                    ")
+    cprint("\🐟/\  /\  /\🐟/\  /\  /\🐟/\  /\  /", fg='b')
+    cprint(" \/  \/🐟\/  \/  \/🐟\/  \/  \/🐟\/ ", fg='b')
+
+    print("")
+    print("After waiting about 10 minutes 🕑 you feel a tug on the line.")
+    time.sleep(random.randrange(2,3))
+    print("You caught a fish! Good job. 🏆")
+    time.sleep(random.randrange(2,3))
+
+    print("")
+    print("You cook the fish over a fire and feel satisfied. 🔥 🐟")
+    time.sleep(random.randrange(2,3))
+
+    print("It's now almost night time. The sun begins to disappear into the horizon. 🌇")
+    time.sleep(random.randrange(2,3))
+    print("")
+    print("You have a decision to make:")
+    time.sleep(random.randrange(1,2))
+
+    # Give the user a decision to make. Depending on their answer,
+    # the game either ends here or they continue on to day 4
+    question = '''\nWould you like to
+    [1] Sleep on the lake shore under the stars. 🌃 ⛺
+    [2] Go to the cave you see in the distance. That looks like a warm place to stay for the night. 👻
+    \nType 1 or 2 and press ENTER to continue:\
+    '''
+    # Yellow text
+    cprint(question, fg='y')
+    answer = input()
+
+    print("\n>> Your answer was: ", answer, "<<\n")
+    time.sleep(random.randrange(1,2))
+
+    if answer == "1":
+        # Player decides to sleep on the lake shore and moves on to day 4.
+        display_day04()
+    else:
+        # Player decides to go to the cave
+        game_over_because("\nYour choice to sleep in a cave was not a wise one. You found a bear, and the bear found dinner. 🐻 \n")
+
+def display_day04():
+    '''
+    Display day 04 in the story.
+    '''
+    clear_screen()
+    # Blue text
+    cprint("DAY 4", fg='b')
+    cprint("===============", fg='b')
+    # create random delay between 1 and 2 seconds
+    time.sleep(random.randrange(1,2))
+
+    print("")
+    print("You wake up on day 4 and continue on your journey.")
 
 
 
@@ -198,15 +290,24 @@ def game_over_because(reason):
     ask_play_again()
 
 
-def start_game():
+def start_game(day=1):
     '''
     Main function. This runs when the game is started or
     the player chooses to replay (after game over)
+
+    Default start day is 1, but can be changed by day= parameter. This is helpful
+    when testing days further into the game so that you don't have to wait to
+    get to the day you're working on.
     '''
     clear_screen()
     display_title_screen()
-    display_day01()
+
+    if day == 1:
+        display_day01()
+    else:
+        function_str = 'display_day0' + str(day)
+        globals()[function_str]() # start_game(day=2) -> display_day02
 
 
 # Main loop
-start_game()
+start_game(day=1)
