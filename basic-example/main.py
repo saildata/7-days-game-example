@@ -168,14 +168,6 @@ def display_day03():
 # Add helper/utility functions
 ##############################
 
-def start_game():
-    '''
-    Main function. This runs when the game is started or
-    the player chooses to replay (after game over)
-    '''
-    display_title_screen()
-    display_day01()
-
 def clear_screen():
     '''
     Clear the terminal screen.
@@ -203,6 +195,24 @@ def game_over_because(reason):
     # Ask if the user wants to play again
     ask_play_again()
 
+def start_game(day=1):
+    '''
+    Main function. This runs when the game is started or
+    the player chooses to replay (after game over)
+
+    Default start day is 1, but can be changed by day= parameter. This is helpful
+    when testing days further into the game so that you don't have to wait to
+    get to the day you're working on.
+    '''
+    clear_screen()
+    display_title_screen()
+
+    if day == 1:
+        display_day01()
+    else:
+        day_string = 'display_day0' + str(day)
+        globals()[day_string]() # start_game(day=2) -> display_day02
+
 
 # Main loop
-start_game()
+start_game(day=1)
