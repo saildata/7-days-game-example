@@ -258,7 +258,42 @@ def display_day04():
     time.sleep(random.randrange(1, 2))
 
     print("")
-    print("You wake up on day 4 and continue on your journey.")
+    print("You wake up on day 4 and continue on your journey. 🌅")
+    time.sleep(random.randrange(1, 2))
+    print("")
+    print("What a nice morning! The sun is bright, the air is clean, the ...")
+    time.sleep(random.randrange(1, 2))
+    print("")
+    print("Cell phone is ringing? ♬ ♫ ♪ ♪")
+    time.sleep(random.randrange(3, 4))
+    print("")
+    print("""As your gaze lowers to the forest 🌳 floor, you see a phone screen lit up and ringing with the
+    most annoying ring tone you've ever heard 📱 ❗-- {insert your favorite song here}
+    """)
+    print("")
+    print("You have a decision to make:")
+    time.sleep(random.randrange(1, 2))
+
+    # Give the user a decision to make. Depending on their answer,
+    # the game either ends here or they continue on to day 5
+    question = '''\nWould you like to
+    [1] Answer the cell phone - it would be rude not to! 🖁
+    [2] Keep walking - it's really none of your business anyways. 👞 🏔
+    \nType 1 or 2 and press ENTER to continue:\
+    '''
+
+    # Yellow text
+    cprint(question, fg='y')
+    answer = input()
+
+    print("\n>> Your answer was: ", answer, "<<\n")
+
+    if answer == "1":
+        # Player decides to answer the cell phone
+        game_over_because("\nYour choice to answer the cell phone was the wrong one. As you pick up the phone, you aren't paying attention to your surroundings. A majestic bald eagle swoops down and carries you away. 📵 🦅\n")
+    else:
+        # Player decides to go to the cave
+        game_over_because("\nYour choice to sleep in a cave was not a wise one. You found a bear, and the bear found dinner. 🐻 \n")
 
 
 ##############
@@ -316,4 +351,4 @@ def start_game(day=1):
 
 
 # Main loop
-start_game(day=1)
+start_game(day=3)
