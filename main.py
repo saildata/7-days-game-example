@@ -88,7 +88,6 @@ def display_day01():
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
-    time.sleep(random.randrange(1, 2))
 
     if answer == "1":
         # Player is going back to the spaceship.. bad choice
@@ -148,7 +147,6 @@ def display_day02():
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
-    time.sleep(random.randrange(1, 2))
 
     if answer == "1":
         # Player decides to eat the forest pizza (gross!)
@@ -239,7 +237,6 @@ def display_day03():
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
-    time.sleep(random.randrange(1, 2))
 
     if answer == "1":
         # Player decides to sleep on the lake shore and moves on to day 4.
