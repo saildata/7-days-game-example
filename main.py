@@ -12,6 +12,7 @@ from cprint import cprint
 from title import display_title_screen
 import art
 
+
 def display_day01():
     '''
     Display day 01 in story
@@ -42,28 +43,28 @@ def display_day01():
     cprint("DAY 1", fg='b')
     cprint("===============", fg='b')
     # create random delay between 1 and 2 seconds
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     print("")
     print("You wake up.")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
     print("Looking down at your watch, you notice that it's 8 AM. ⏰")
     print("...")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     print("You are not sure where you are, 🗺")
     print("but you begin to remember a crash landing in your space vehicle,")
     print("")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
     print("🚀")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
     print("🌠")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
     print("🔥 🔥 🔥")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
     print("")
     print("which you now see approximately 20 feet behind you.")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     # Get main character name (still day 01)
     # Add color: Yellow text for user input
@@ -73,7 +74,7 @@ def display_day01():
     # Use str.title method to capitalize first letter of user name
     print("\nWell,", name.title(), ", you tell yourself...")
     print("It's time to figure out what's going on.")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 2
@@ -87,7 +88,7 @@ def display_day01():
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     if answer == "1":
         # Player is going back to the spaceship.. bad choice
@@ -95,6 +96,7 @@ def display_day01():
     else:
         # Player moves on to day 02
         display_day02()
+
 
 def display_day02():
     '''
@@ -105,34 +107,34 @@ def display_day02():
     cprint("DAY 2", fg='b')
     cprint("===============", fg='b')
     # create random delay between 1 and 2 seconds
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     print("")
     print("Forget the space ship! 🚀  ... ")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     print("")
     print("It's time that I live a little! 🎉")
     print("Let's see what this forest has to offer.")
-    time.sleep(random.randrange(2,3))
+    time.sleep(random.randrange(2, 3))
 
     print("...")
     print("")
     print("As you stumble along in the forest, you come across a pizza! 🍕")
-    time.sleep(random.randrange(2,3))
+    time.sleep(random.randrange(2, 3))
 
     print("...")
     print("")
     print("Wait a minute ... thinking outloud, you realize ...")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     print("...")
     print("")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     print("I am super hungry, but this seems too good to be true!")
     print("You have a decision to make:")
-    time.sleep(random.randrange(2,3))
+    time.sleep(random.randrange(2, 3))
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 3
@@ -146,7 +148,7 @@ def display_day02():
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     if answer == "1":
         # Player decides to eat the forest pizza (gross!)
@@ -165,24 +167,24 @@ def display_day03():
     cprint("DAY 3", fg='b')
     cprint("===============", fg='b')
     # create random delay between 1 and 2 seconds
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     print("")
     print("You continue on walking through the forest. 🌲 🌲 🌲")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
     print("")
     print("Your mission is to find a stick so that you can make a fishing pole and finally eat! 🎣")
-    time.sleep(random.randrange(2,3))
+    time.sleep(random.randrange(2, 3))
     print("")
     print("You manage to find 🔍 a stick and put together a simple, although functional fishing pole. 😎")
-    time.sleep(random.randrange(3,4))
+    time.sleep(random.randrange(3, 4))
     print("")
     print("Luckily 🍀 you also come across a small lake")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
     print("")
     print("Now, about to faint due to lack of food, you sit down and begin fishing.")
     print("")
-    time.sleep(random.randrange(2,3))
+    time.sleep(random.randrange(2, 3))
 
     # Sun / lake with fish
     # sun copied from wego project https://github.com/schachmat/wego/blob/master/frontends/ascii-art-table.go
@@ -194,8 +196,8 @@ def display_day03():
     cprint("                             `-᾿    ", fg='y')
     cprint("                            /   \\  ", fg='y')
     cprint("                                    ")
-    cprint("\🐟/\  /\  /\🐟/\  /\  /\🐟/\  /\  /", fg='b', style='x')
-    cprint(" \/  \/🐟\/  \/  \/🐟\/  \/  \/🐟\/ ", fg='b', style='x')
+    cprint(r"\🐟/\  /\  /\🐟/\  /\  /\🐟/\  /\  /", fg='b', style='x')
+    cprint(r" \/  \/🐟\/  \/  \/🐟\/  \/  \/🐟\/ ", fg='b', style='x')
     time.sleep(4)
     clear_screen()
 
@@ -206,24 +208,24 @@ def display_day03():
     cprint("                             `-᾿    ", fg='y')
     cprint("                            /   \\  ", fg='y')
     cprint("                                    ")
-    cprint("\🐟/\  /\  /\🐟/\  /\  /\🐟/\  /\  /", fg='b')
-    cprint(" \/  \/🐟\/  \/  \/🐟\/  \/  \/🐟\/ ", fg='b')
+    cprint(r"\🐟/\  /\  /\🐟/\  /\  /\🐟/\  /\  /", fg='b')
+    cprint(r" \/  \/🐟\/  \/  \/🐟\/  \/  \/🐟\/ ", fg='b')
 
     print("")
     print("After waiting about 10 minutes 🕑 you feel a tug on the line.")
-    time.sleep(random.randrange(2,3))
+    time.sleep(random.randrange(2, 3))
     print("You caught a fish! Good job. 🏆")
-    time.sleep(random.randrange(2,3))
+    time.sleep(random.randrange(2, 3))
 
     print("")
     print("You cook the fish over a fire and feel satisfied. 🔥 🐟")
-    time.sleep(random.randrange(2,3))
+    time.sleep(random.randrange(2, 3))
 
     print("It's now almost night time. The sun begins to disappear into the horizon. 🌇")
-    time.sleep(random.randrange(2,3))
+    time.sleep(random.randrange(2, 3))
     print("")
     print("You have a decision to make:")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     # Give the user a decision to make. Depending on their answer,
     # the game either ends here or they continue on to day 4
@@ -237,7 +239,7 @@ def display_day03():
     answer = input()
 
     print("\n>> Your answer was: ", answer, "<<\n")
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     if answer == "1":
         # Player decides to sleep on the lake shore and moves on to day 4.
@@ -245,6 +247,7 @@ def display_day03():
     else:
         # Player decides to go to the cave
         game_over_because("\nYour choice to sleep in a cave was not a wise one. You found a bear, and the bear found dinner. 🐻 \n")
+
 
 def display_day04():
     '''
@@ -255,11 +258,10 @@ def display_day04():
     cprint("DAY 4", fg='b')
     cprint("===============", fg='b')
     # create random delay between 1 and 2 seconds
-    time.sleep(random.randrange(1,2))
+    time.sleep(random.randrange(1, 2))
 
     print("")
     print("You wake up on day 4 and continue on your journey.")
-
 
 
 ##############
@@ -292,7 +294,7 @@ def game_over_because(reason):
     '''
     Display game over screen.
     '''
-    cprint("\nGAME OVER\n===============\n" + reason  + "\nBetter luck next time!", fg='r')
+    cprint("\nGAME OVER\n===============\n" + reason + "\nBetter luck next time!", fg='r')
     # Ask if the user wants to play again
     ask_play_again()
 
@@ -313,7 +315,7 @@ def start_game(day=1):
         display_day01()
     else:
         day_string = 'display_day0' + str(day)
-        globals()[day_string]() # start_game(day=2) -> display_day02
+        globals()[day_string]()  # start_game(day=2) -> display_day02
 
 
 # Main loop
