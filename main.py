@@ -296,6 +296,18 @@ def display_day04():
         game_over_because("\nYour choice to sleep in a cave was not a wise one. You found a bear, and the bear found dinner. 🐻 \n")
 
 
+def display_day05():
+    '''
+    Display day 05 in the story.
+    '''
+    clear_screen()
+    # Blue text
+    cprint("DAY 5", fg='b')
+    cprint("===============", fg='b')
+    # create random delay between 1 and 2 seconds
+    time.sleep(random.randrange(1, 2))
+
+
 ##############
 # Run the game
 # Add helper/utility functions
