@@ -363,4 +363,4 @@ def start_game(day=1):
 
 
 # Main loop
-start_game(day=3)
+start_game(day=1)
